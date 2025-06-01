@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 /* Base */
 body {
   margin: 0;
@@ -52,7 +56,7 @@ body {
 .hero {
   background-image: url('https://img.freepik.com/fotos-gratis/natureza-morta-com-a-balanca-da-justica_23-2149776027.jpg');
   background-size: cover;
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
   height: 70vh;
   position: relative;
@@ -60,20 +64,77 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  border-radius: 0px 0px 20px 20px;
+  border-radius: 0 0 20px 20px;
+  padding: 1rem;
 }
 
 .hero-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.65);
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 10px;
   color: white;
-  max-width: 90%;
+  max-width: 900px;
+  width: 100%;
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.hero-overlay.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .hero-overlay h2 {
-  font-size: 2.5rem;
-  font-weight: 600;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.areas-atuacao {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.areas-atuacao li::before {
+  content: "⚖️ ";
+  margin-right: 0.5rem;
+}
+
+.idiomas {
+  font-size: 1rem;
+  color: #f0f0f0;
+}
+
+/* Animação */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .hero-overlay h2 {
+    font-size: 2rem;
+  }
+
+  .areas-atuacao li {
+    font-size: 1rem;
+  }
+
+  .idiomas {
+    font-size: 0.95rem;
+  }
 }
 
 
@@ -247,5 +308,26 @@ body {
   .perfil-foto {
     width: 160px;
     height: 180px;
+  }
+}
+
+.titulo-wrapper {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.perfil-titulo {
+  font-size: 2rem;
+  font-family: 'Georgia', serif;
+  color: #1c1c1c;
+  display: inline-block;
+  border-bottom: 2px solid #d4af37;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .perfil-titulo {
+    font-size: 1.5rem;
   }
 }

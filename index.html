@@ -12,21 +12,28 @@
             <h1 class="logo">Bogéa, Vieira & Novaes</h1>
             <nav class="nav-links">
             <a href="#sobre">Sobre</a>
-            <a href="#atuacao">Áreas de Atuação</a>
+            <a href="#advogados">Advogados</a>
             <a href="#contato">Contato</a>
             </nav>
         </div>
     </header>
     
-    <section class="hero">
-        <div class="hero-overlay">
-            <h2>Advocacia BVN</h2>
-        </div>
-    </section>
+<section class="hero fade-section">
+  <div class="hero-overlay">
+    <h2>Advocacia BVN</h2>
+    <ul class="areas-atuacao">
+      <li>Penal-econômico, Penal, Lei de Drogas (11.343/06)</li>
+      <li>Direito Empresarial, Recuperação Judicial e Falências</li>
+      <li>Litígios judiciais, Contratos e Contencioso cível</li>
+    </ul>
+    <p class="idiomas"><strong>Idiomas:</strong> Português 🇧🇷 | Inglês 🇺🇸 | Espanhol 🇪🇸</p>
+  </div>
+</section>
+
 
     <section class="sala-container">
     <img src="https://live.staticflickr.com/5805/23303622783_c07b7e400b_b.jpg" alt="Sala de advocacia" class="sala-foto">
-    <div class="sala-descricao">
+    <div id="sobre" class="sala-descricao">
         <h2>O escritório</h2>
         <p>
         Bogéa, Vieira & Novaes conta com profissionais qualificados provenientes das melhores instituições jurídicas brasileiras, sendo reconhecido por sua expertise no desenvolvimento de argumentos artesanais e inovadores que lançam excelência sobre os serviços jurídicos prestados e permitem a entrega dos melhores resultados judiciais e extrajudiciais.
@@ -36,6 +43,10 @@
         </p>
     </div>
     </section>
+
+    <div class="titulo-wrapper">
+        <h3 id="advogados" class="perfil-titulo">Advogados</h3>
+    </div>
 
 
     <section class="perfil-container">
@@ -73,13 +84,29 @@
   <div class="footer-container">
     <p>&copy; 2025 Bogéa Viera Novaes - Todos os direitos reservados.</p>
     <p>
-      <a href="mailto:contato@bvnadv.com.br">contato@bvnadv.com.br</a> | 
+      <a id="contato" href="mailto:contato@bvnadv.com.br">contato@bvnadv.com.br</a> | 
       <a href="mailto:contato@bvnadvogados.com">contato@bvnadvogados.com</a> | 
       <a href="tel:+556112345678">(61) 1234-5678</a>
     </p>
     <p>SHIS QI 05, Conjunto 15, Casa 23, Lago Sul, Brasília/DF, CEP 71615-150</p>
   </div>
 </footer>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  document.querySelectorAll('.fade-section').forEach(section => {
+    observer.observe(section);
+  });
+</script>
 
 
 </body>
