@@ -1,0 +1,251 @@
+/* Base */
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: #f5f5f5;
+}
+
+/* Header */
+.site-header {
+  background-color: #1c1c1c;
+  color: white;
+  padding: 1.2rem 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.site-header .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.nav-links a {
+  color: white;
+  margin-left: 2rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #d4af37;
+}
+
+/* Hero */
+.hero {
+  background-image: url('https://img.freepik.com/fotos-gratis/natureza-morta-com-a-balanca-da-justica_23-2149776027.jpg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 70vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 8px;
+  color: white;
+  max-width: 90%;
+}
+
+.hero-overlay h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+
+/* Sala */
+.sala-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.sala-foto {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+.sala-descricao {
+  flex: 1;
+  min-width: 280px;
+}
+
+.sala-descricao h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Georgia', serif;
+}
+
+.sala-descricao p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  max-width: 500px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .sala-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sala-foto {
+    max-width: 100%;
+  }
+
+  .sala-descricao h2 {
+    font-size: 1.6rem;
+  }
+
+  .sala-descricao p {
+    font-size: 1rem;
+  }
+}
+
+
+
+/* Perfil */
+.perfil-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.perfil-foto {
+  width: 280px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: -10px 6px 1px rgba(0, 0, 0, 0.7);
+}
+
+.perfil-descricao {
+  flex: 1;
+  min-width: 280px;
+}
+
+.perfil-descricao h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.perfil-descricao p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #1c1c1c;
+  color: #f0f0f0;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.site-footer a {
+  color: #d4af37;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ✅ RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-links {
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .hero-overlay h2 {
+    font-size: 1.8rem;
+  }
+
+  .perfil-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .perfil-foto {
+    width: 200px;
+    height: 220px;
+  }
+
+  .perfil-descricao h2 {
+    font-size: 1.6rem;
+  }
+
+  .perfil-descricao p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 60vh;
+    padding: 1rem;
+  }
+
+  .hero-overlay h2 {
+    font-size: 1.5rem;
+  }
+
+  .perfil-foto {
+    width: 160px;
+    height: 180px;
+  }
+}
